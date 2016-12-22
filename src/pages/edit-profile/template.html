@@ -1,0 +1,37 @@
+<ion-header no-shadow class="brydge-navbar"></ion-header>
+
+<ion-content>
+  <div padding class="profile">
+    <div class="profile-cover">
+      <image-wrapper [url]="data?.profile_picture"></image-wrapper>
+      <button ion-button icon-only clear end color="light" (click)="save()" class="btn-save">
+        <ion-icon name="checkmark"></ion-icon>
+      </button>
+
+      <ion-list>
+        <ion-item>
+          <ion-label stacked color="light">Full Name</ion-label>
+          <ion-input type="text" value="{{data?.full_name}}"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked color="light">Title</ion-label>
+          <ion-input type="text" value=""></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked color="light">Company</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+
+
+      </ion-list>
+
+    </div>
+
+    <div [ngSwitch]="provider">
+      <button *ngSwitchCase="'facebook'" (click)="logout('facebook')">FB Logout</button>
+      <button *ngSwitchCase="'twitter'" (click)="logout('twitter')">Twitter Logout</button>
+    </div>
+  </div>
+</ion-content>

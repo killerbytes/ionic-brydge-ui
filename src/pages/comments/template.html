@@ -1,0 +1,47 @@
+<ion-header no-shadow class="brydge-navbar"></ion-header>
+
+<ion-content>
+  <div class="h-pad story">
+    <h2>{{story?.title}}</h2>
+    <hr>
+  </div>
+    <ul class="list">
+      <li *ngFor="let item of opinions;">
+        <div class="comment-item">
+          <div padding>
+            <media-user [profile]=item.profile>
+              <div class="title"><user-title [profile]=item.profile></user-title></div>
+            </media-user>
+            <p>{{item.content}}</p>
+          </div>
+          <div class="section-title h-pad">
+            <strong (click)="toggleReplies(item)">{{item.replies}} Replies</strong>
+          </div>
+          <div class="replies" *ngIf="item.show">
+            <ul class="list">
+              <li *ngFor="let i of item.comments;">
+                <div padding>
+                  <media-user [profile]=i.profile>
+                    <div><p>{{i.content}}</p></div>
+                  </media-user>
+                </div>
+              </li>
+            </ul>
+            <form action="">
+              <textarea type="text" placeholder="Write your reply to Joel..." rows="1"></textarea>
+              <button ion-button icon-only clear (click)="submit()">
+                <ion-icon name="send"></ion-icon>
+              </button>
+            </form>
+
+          </div>
+        </div>
+      </li>
+    </ul>
+    <form action="">
+      <textarea type="text" placeholder="Write your opinion..." rows="1"></textarea>
+      <button ion-button icon-only clear (click)="submit()">
+        <ion-icon name="send"></ion-icon>
+      </button>
+    </form>
+</ion-content>

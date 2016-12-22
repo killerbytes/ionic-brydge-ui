@@ -1,0 +1,56 @@
+ul.list{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  > li >{
+    a,
+    label{
+      color: inherit;
+      font-size: 1rem;
+      padding: 1rem $gutter;
+      display: block;
+      text-decoration: none;
+    }
+  }
+}
+ul.edition-list{
+  @extend ul.list;
+}
+
+ul.list-dotted{
+  width: 100%;
+  margin:0;
+  padding:0;
+  & > li{
+    display: inline-block;
+    // word-break:
+  }
+  & > li:after{
+    content: " ";
+    width: 3px;
+    height: 3px;
+    display: inline-block;
+    background-color: gray;
+    border-radius: 100%;
+    position: relative;
+    top: -2px;
+    margin-right: 8px;
+    margin-left: 8px;
+  }
+  & > li:last-child:after{
+    display: none;
+  }
+}
+
+ul.subscription-list{
+  li{
+    display: inline-block;
+    vertical-align: top;
+    // width: 48.5%;
+    margin-bottom: 1rem;
+    margin-left: 10px;
+  }
+  li:nth-child(2n){
+
+  }
+}

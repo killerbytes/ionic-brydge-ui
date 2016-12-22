@@ -1,0 +1,27 @@
+[padding]{
+  padding: $gutter;
+}
+.h-pad{
+  padding-left: $gutter;
+  padding-right: $gutter;
+}
+.v-pad{
+  padding-top: $gutter;
+  padding-bottom: $gutter;
+}
+.mb{ margin-bottom: 1rem !important;}
+
+.pull-right{ float: right; }
+.pull-left{ float: left; }
+.flex{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  .flex-item{
+    flex-grow: 2;
+  }
+}
+
+.text-right{
+  text-align: right;
+}

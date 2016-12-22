@@ -1,0 +1,68 @@
+.hero-story{
+  height: 70vh;
+  background-size: cover;
+  background-position: center center;
+  h1{
+    color: #FFF;
+    margin: 1rem 0;
+    margin-bottom: .5rem;
+    a{ color: inherit; }
+    .sub-title{
+      font-size: 18px;
+    }
+  }
+  img{
+    visibility: hidden;
+  }
+  .page-header{
+    position: absolute;
+    top: 0;
+    width: 90%;
+    margin-top: 0;
+    z-index: 102;
+  }
+}
+
+.story{
+  h2, h3{
+    font-weight: normal;
+    margin: 1rem 0;
+    a{ color: inherit;}
+  }
+  h5{
+    margin: 0;
+    padding: .5rem $gutter;
+    background-color: $bg-gray;
+  }
+  p{
+    color: $text-gray;
+    line-height: 1.8rem;
+  }
+  article{
+    padding: 1rem;
+    border-bottom: 1px solid $border-color;
+  }
+}
+
+.story-actions{
+  color: $text-gray;
+  margin-bottom: 1rem;
+  .button{
+    padding: 0;
+    font-size: 1.2rem;
+  }
+  ul.list{
+    li{
+      span{
+        line-height: 1.4rem;
+      }
+    }
+  }
+}
+
+.section-title{
+  background-color: $bg-gray;
+  padding: .5rem $gutter;
+  strong{
+  }
+}

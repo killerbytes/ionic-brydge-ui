@@ -1,0 +1,16 @@
+.comment-item{
+  .image-wrapper{
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+  }  
+  p:last-child{
+    margin: 0;
+  }
+  media-user + p:last-child{
+    margin-top: 1rem;
+  }
+}
+.replies{
+  margin-left: 2rem;
+}

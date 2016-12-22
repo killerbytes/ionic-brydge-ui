@@ -1,0 +1,16 @@
+<ion-header no-shadow class="brydge-navbar"></ion-header>
+
+<ion-content>
+  <ul class="list subscription-list">
+    <li *ngFor="let item of topics;" [style.width.px]="getWidth()">
+      <button full ion-button clear class="subscription-item wrapper" [style.background-image]="utilsService.getSafeUrl(item.image)" (click)="gotoTopic(item.id)">
+        <img [src]="item.image" alt="">
+        <div class="wrapper-content">
+          <h4 class="title">{{item.name}}</h4>
+        </div>
+      </button>
+    </li>
+  </ul>
+
+
+</ion-content>

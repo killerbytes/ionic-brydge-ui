@@ -1,0 +1,36 @@
+<ion-header no-shadow class="brydge-navbar"></ion-header>
+
+<ion-content>
+  <div class="hero-story wrapper" [style.background-image]="getCoverImage()">
+    <div class="page-header" padding>
+      <div class="container">
+        <h1 (click)="gotoSubscriptions()">
+          {{topic?.name}}
+          <div class="sub-title">December 13</div>
+        </h1>
+      </div>
+    </div>
+  </div>
+
+  <section class="story">
+    <article *ngFor="let item of topic?.stories;" (click)="gotoStory(item.id)">
+      <div class="h-pad">
+        <h2>{{item.title}}</h2>
+        <div class="story-actions flex">
+          <div class="flex-item">
+            <div>Bloomberg, AFP + 2 more</div>
+            <ul class="flex list list-dotted">
+              <li><span>25 Opinions</span></li>
+              <li><span>160 Views</span></li>
+            </ul>
+          </div>
+          <div class="flex-item text-right">
+            <ion-icon name="book"></ion-icon>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+
+
+</ion-content>

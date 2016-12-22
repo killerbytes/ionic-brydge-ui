@@ -1,0 +1,30 @@
+<ion-header no-shadow class="brydge-navbar"></ion-header>
+
+<ion-content class="story">
+  <image-wrapper [url]="story?.image"></image-wrapper>
+  <div padding>
+    <div class="h-pad">
+      <h2>{{story?.title}}</h2>
+      <hr>
+      <p>{{story?.content}}</p>
+
+
+
+    </div>
+    <div class="text-right">
+      <button ion-button clear icon-left (click)="gotoComments(item)">
+        <ion-icon name="chatboxes"></ion-icon> Opinions
+      </button>
+    </div>
+
+  </div>
+
+    <div class="section-title h-pad">
+      <strong>Sources</strong>
+    </div>
+    <div padding>
+      <ul class="list">
+        <li *ngFor="let item of story?.sources;"><a href="{{item}}">{{item}}</a></li>
+      </ul>
+    </div>
+</ion-content>

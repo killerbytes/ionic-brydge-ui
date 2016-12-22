@@ -1,0 +1,21 @@
+<ion-header no-shadow class="brydge-navbar"></ion-header>
+
+<ion-content>
+  <div padding class="profile">
+    <div class="profile-cover">
+      <image-wrapper [url]="data?.profile_picture"></image-wrapper>
+      <button ion-button icon-only clear end color="light" (click)="edit()" class="btn-edit">
+        <ion-icon name="create"></ion-icon>
+      </button>
+
+      <h1 class="name">{{ data?.full_name }}</h1>
+      <div class="title">Front End Developer at Brydge</div>
+
+    </div>
+
+    <div [ngSwitch]="provider">
+      <button *ngSwitchCase="'facebook'" (click)="logout('facebook')">FB Logout</button>
+      <button *ngSwitchCase="'twitter'" (click)="logout('twitter')">Twitter Logout</button>
+    </div>
+  </div>
+</ion-content>

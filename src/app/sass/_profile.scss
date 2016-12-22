@@ -1,0 +1,35 @@
+.profile{
+  .btn-edit, .btn-save{
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ion-item{
+    background-color: transparent;
+    ion-label{
+      color: #FFF;
+    }
+  }
+  .profile-cover{
+    background-color: color($colors, primary);
+    text-align: center;
+    position: relative;
+    padding-top: 50px;
+    margin-top: 72px;
+    padding-bottom: 2rem;
+    color: #FFF;
+    image-wrapper{
+      position: absolute;
+      top: -60px;
+      width: 100%;
+      left: 0;
+    }
+  }
+  .image-wrapper{
+    width: 120px;
+    height: 120px;
+    margin: auto;
+    border: 3px solid #FFF;
+    border-radius: 100px;
+  }
+}

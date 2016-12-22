@@ -1,0 +1,20 @@
+<ion-header no-shadow>
+  <ion-navbar no-border>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="dismiss()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div padding>
+    <ion-list class="menu-list">
+      <button *ngFor="let item of pages;" detail-none ion-item icon-left (click)="goTo(item)">
+        <ion-icon name="{{item.icon}}"></ion-icon>   {{item.title}}
+      </button>
+    </ion-list>
+
+  </div>
+</ion-content>
