@@ -39,9 +39,11 @@ export class StoryListPage implements OnInit {
   gotoSubscriptions(){
     this.navCtrl.push(SubscriptionListPage);
   }
+
   gotoStory(id){
     this.navCtrl.push(StoryPage, {id: id});
   }
+
   ngOnInit(): void {
     this.getTopic(this.params.get('id'));
   }

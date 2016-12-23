@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { StoryListPage } from '../story-list/page';
 import { NavController } from 'ionic-angular';
 import { Platform } from 'ionic-angular';
+
+import { StoryListPage } from '../story-list/page';
+import { TopicsPage } from '../topics/page';
 
 import { SubscriptionService } from '../../app/services/subscription';
 import { UtilsService } from '../../app/services/utils';
@@ -35,6 +37,9 @@ export class SubscriptionListPage implements OnInit {
   }
   gotoTopic(id){
     this.navCtrl.push(StoryListPage, {id: id});
+  }
+  gotoTopics(){
+    this.navCtrl.push(TopicsPage);
   }
 
   getWidth(){

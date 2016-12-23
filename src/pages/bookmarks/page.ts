@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {  NavController, NavParams } from 'ionic-angular';
 import { BookmarkService } from '../../app/services/bookmark';
 
+import { StoryPage } from '../story/page';
+
 
 @Component({
   templateUrl: 'template.html',
@@ -26,4 +28,9 @@ export class BookmarksPage implements OnInit {
   ngOnInit(): void {
     this.getBookmarks();
   }
+
+  gotoStory(id){
+    this.navCtrl.push(StoryPage, {id: id});
+  }
+
 }

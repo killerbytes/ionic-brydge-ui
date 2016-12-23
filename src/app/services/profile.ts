@@ -17,9 +17,15 @@ export class ProfileService {
     return this.http.get(`${me}`)
     .map(res=> res.json());
   }
-  
+
   findRecord(id){
-    return this.http.get(`${URL}/{id}`)
+    return this.http.get(`${URL}/${id}`)
     .map(res=> res.json());
   }
+
+  query(id=12, type){
+    return this.http.get(`${URL}/${id}/${type}`)
+    .map(res=> res.json());
+  }
+
 }

@@ -1,0 +1,25 @@
+<ion-header no-shadow class="brydge-navbar"></ion-header>
+
+<ion-content>
+  <ul class="list subscription-list">
+    <li >
+    </li>
+  </ul>
+
+  <ion-list>
+    <ion-item *ngFor="let item of topics;">
+      <ion-label>{{item?.name}}</ion-label>
+      <ion-checkbox [(ngModel)]="item.checked" (click)="checkItem(item)" color="primary"></ion-checkbox>
+
+    </ion-item>
+  </ion-list>
+
+
+  <ion-fab right bottom>
+     <button ion-fab (click)="gotoSubscriptions()">
+       <ion-icon name="checkmark"></ion-icon>
+     </button>
+  </ion-fab>
+
+
+</ion-content>

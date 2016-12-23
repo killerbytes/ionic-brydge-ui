@@ -4,9 +4,6 @@
   <div padding class="profile">
     <div class="profile-cover">
       <image-wrapper [url]="data?.profile_picture"></image-wrapper>
-      <button ion-button icon-only clear end color="light" (click)="save()" class="btn-save">
-        <ion-icon name="checkmark"></ion-icon>
-      </button>
 
       <ion-list>
         <ion-item>
@@ -27,6 +24,7 @@
 
       </ion-list>
 
+
     </div>
 
     <div [ngSwitch]="provider">
@@ -34,4 +32,11 @@
       <button *ngSwitchCase="'twitter'" (click)="logout('twitter')">Twitter Logout</button>
     </div>
   </div>
+
+  <ion-fab right bottom>
+     <button ion-fab (click)="save()">
+       <ion-icon name="checkmark"></ion-icon>
+     </button>
+  </ion-fab>
+
 </ion-content>

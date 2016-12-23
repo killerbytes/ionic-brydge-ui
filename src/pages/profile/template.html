@@ -4,9 +4,6 @@
   <div padding class="profile">
     <div class="profile-cover">
       <image-wrapper [url]="data?.profile_picture"></image-wrapper>
-      <button ion-button icon-only clear end color="light" (click)="edit()" class="btn-edit">
-        <ion-icon name="create"></ion-icon>
-      </button>
 
       <h1 class="name">{{ data?.full_name }}</h1>
       <div class="title">Front End Developer at Brydge</div>
@@ -18,4 +15,21 @@
       <button *ngSwitchCase="'twitter'" (click)="logout('twitter')">Twitter Logout</button>
     </div>
   </div>
+
+  <div class="h-pad text-center">
+    <h4>Opinions</h4>
+  </div>
+  <ion-list>
+    <ion-item *ngFor="let item of opinions;" (click)="gotoStory(item.story.id)">
+      {{item.story.title}}
+    </ion-item>
+  </ion-list>
+
+
+  <ion-fab right bottom>
+     <button ion-fab (click)="edit()">
+       <ion-icon name="create"></ion-icon>
+     </button>
+  </ion-fab>
+
 </ion-content>

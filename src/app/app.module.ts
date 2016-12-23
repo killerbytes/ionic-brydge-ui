@@ -6,6 +6,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/page';
 import { LoginPage } from '../pages/login/page';
 import { TestPage } from '../pages/test/page';
+import { TopicsPage } from '../pages/topics/page';
 import { SubscriptionListPage } from '../pages/subscription-list/page';
 import { MenuPage } from '../pages/menu/page';
 import { ProfilePage } from '../pages/profile/page';
@@ -39,6 +40,7 @@ const cloudSettings: CloudSettings = {
     EditProfilePage,
     BookmarksPage,
     AboutPage,
+    TopicsPage,
     StoryPage,
     CommentsPage,
     StoryListPage,
@@ -66,6 +68,7 @@ const cloudSettings: CloudSettings = {
     EditProfilePage,
     BookmarksPage,
     AboutPage,
+    TopicsPage,
     StoryPage,
     CommentsPage,
     StoryListPage,

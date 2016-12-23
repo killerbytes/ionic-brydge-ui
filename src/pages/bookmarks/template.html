@@ -3,12 +3,12 @@
 <ion-content>
   <div padding>
     <h1>Saved</h1>
-    <ul>
-      <li *ngFor="let item of bookmarks;">
+    <ion-list>
+      <ion-item *ngFor="let item of bookmarks;" (click)="gotoStory(item.id)">
         {{item.title}}
-      </li>
-    </ul>
-
+      </ion-item>
+    </ion-list>
 
   </div>
+
 </ion-content>
